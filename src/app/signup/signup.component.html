@@ -1,1 +1,27 @@
-<p>signup works!</p>
+<form [formGroup]="form" (submit)="signup()">
+    <h2>ثبت‌نام</h2>
+    <section>
+        <div class="lable">نام و نام خانوادگی:</div>
+        <input type="text" formControlName="name" />
+    </section>
+    <section>
+        <div class="lable">ایمیل:</div>
+        <input type="text" formControlName="email" class="ltr" />
+    </section>
+    <section>
+        <div class="lable">موبایل:</div>
+        <input type="text" formControlName="mobile" class="ltr" />
+    </section>
+    <section>
+        <div class="lable">کلمه عبور:</div>
+        <input type="password" formControlName="password" class="ltr" />
+    </section>
+    <section>
+        <div class="lable">تایید کلمه عبور:</div>
+        <input type="password" formControlName="confirm" class="ltr" />
+    </section>
+    <div class="button">
+        <button type="submit">ثبت‌نام</button>
+        <button type="button" (click)="reset()">بازنویسی</button>
+    </div>
+</form>

@@ -1,0 +1,62 @@
+:host {
+    direction: rtl;
+    font-family: yekan;
+}
+
+form {
+    width: 500px;
+    max-width: 90%;
+    margin: 1rem auto;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: #eee;
+}
+
+section {
+    border-top: 1px solid #ccc;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+section div.lable {
+    width: 175px;
+}
+
+section input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    direction: rtl;
+    font-family: yekan;
+}
+
+section input.ltr {
+    direction: ltr;
+    text-align: left;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+div.button {
+    border-top: 1px solid #ccc;
+    padding: 0.5rem;
+    padding-right: calc(0.5rem + 175px);
+}
+
+button {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #eee;
+    font-family: yekan;
+    font-size: 12px;
+}
