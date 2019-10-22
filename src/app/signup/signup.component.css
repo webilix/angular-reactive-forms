@@ -60,3 +60,11 @@ button {
     font-family: yekan;
     font-size: 12px;
 }
+
+div.error {
+    background-color: #fee;
+    color: #900;
+    text-align: center;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+}

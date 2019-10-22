@@ -4,22 +4,60 @@
         <div class="lable">نام و نام خانوادگی:</div>
         <input type="text" formControlName="name" />
     </section>
+    <div
+        class="error"
+        *ngIf="(form.get('name').touched || form.get('name').dirty) && form.get('name').hasError('required')"
+    >
+        مشخص کردن مقدار الزامی است.
+    </div>
     <section>
         <div class="lable">ایمیل:</div>
         <input type="text" formControlName="email" class="ltr" />
     </section>
+    <div
+        class="error"
+        *ngIf="(form.get('email').touched || form.get('email').dirty) && form.get('email').hasError('required')"
+    >
+        مشخص کردن مقدار الزامی است.
+    </div>
+    <div
+        class="error"
+        *ngIf="(form.get('email').touched || form.get('email').dirty) && form.get('email').hasError('email')"
+    >
+        مقدار باید به صورت آدرس ایمیل مشخص شود.
+    </div>
     <section>
         <div class="lable">موبایل:</div>
         <input type="text" formControlName="mobile" class="ltr" />
     </section>
+    <div
+        class="error"
+        *ngIf="(form.get('mobile').touched || form.get('mobile').dirty) && form.get('mobile').hasError('required')"
+    >
+        مشخص کردن مقدار الزامی است.
+    </div>
     <section>
         <div class="lable">کلمه عبور:</div>
         <input type="password" formControlName="password" class="ltr" />
     </section>
+    <div
+        class="error"
+        *ngIf="
+            (form.get('password').touched || form.get('password').dirty) && form.get('password').hasError('required')
+        "
+    >
+        مشخص کردن مقدار الزامی است.
+    </div>
     <section>
         <div class="lable">تایید کلمه عبور:</div>
         <input type="password" formControlName="confirm" class="ltr" />
     </section>
+    <div
+        class="error"
+        *ngIf="(form.get('confirm').touched || form.get('confirm').dirty) && form.get('confirm').hasError('required')"
+    >
+        مشخص کردن مقدار الزامی است.
+    </div>
     <div class="button">
         <button type="submit">ثبت‌نام</button>
         <button type="button" (click)="reset()">بازنویسی</button>
