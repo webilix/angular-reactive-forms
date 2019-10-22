@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { MobileValidator } from '../validators/mobile.validator';
+
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
@@ -15,7 +17,7 @@ export class SignupComponent implements OnInit {
         this.form = new FormGroup({
             name: new FormControl('', Validators.required),
             email: new FormControl('', [Validators.required, Validators.email]),
-            mobile: new FormControl('', Validators.required),
+            mobile: new FormControl('', [Validators.required, MobileValidator]),
             password: new FormControl('', Validators.required),
             confirm: new FormControl('', Validators.required)
         });

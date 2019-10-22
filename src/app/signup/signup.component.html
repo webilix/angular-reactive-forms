@@ -36,6 +36,12 @@
     >
         مشخص کردن مقدار الزامی است.
     </div>
+    <div
+        class="error"
+        *ngIf="(form.get('mobile').touched || form.get('mobile').dirty) && form.get('mobile').hasError('mobile')"
+    >
+        مقدار باید به صورت شماره موبایل مشخص شود.
+    </div>
     <section>
         <div class="lable">کلمه عبور:</div>
         <input type="password" formControlName="password" class="ltr" />
